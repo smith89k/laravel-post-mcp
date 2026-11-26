@@ -24,7 +24,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - A list of related items is checked in full before anything is created, so one bad item no longer leaves the earlier ones behind.
 - Creating a related item that needs more than a name now returns a readable error instead of a database error.
 
-## [0.1.0] - 2026-11-24
+## 0.1.0 - 2026-11-24
 
 ### Added
 
@@ -40,5 +40,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Gate check on every tool call (everyone is denied until the gate is defined), rate limiting and an audit log table with an optional log channel.
 - `post-mcp:install`, `post-mcp:fields` and `post-mcp:token` commands.
 
-[Unreleased]: https://github.com/smith89k/laravel-post-mcp/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/smith89k/laravel-post-mcp/releases/tag/v0.1.0
+[Unreleased]: https://github.com/smith89k/laravel-post-mcp/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/smith89k/laravel-post-mcp/releases/tag/v0.2.0

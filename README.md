@@ -1,15 +1,22 @@
-<p align="center"><img src="art/logo.svg" width="96" height="96" alt="Post MCP logo"></p>
+<div align="center">
 
-<p align="center">
+<img src="art/logo.svg" width="112" height="112" alt="Post MCP logo">
+
+# Laravel Post MCP
+
+**Let an AI app (Claude, ChatGPT, Cursor and others) write and manage the blog posts of your Laravel site, using the Post model you already have.**
+
 <a href="https://github.com/smith89k/laravel-post-mcp/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/smith89k/laravel-post-mcp/tests.yml?branch=main&label=tests" alt="Tests"></a>
 <a href="https://packagist.org/packages/smith89k/laravel-post-mcp"><img src="https://img.shields.io/packagist/v/smith89k/laravel-post-mcp" alt="Latest Version"></a>
 <a href="https://packagist.org/packages/smith89k/laravel-post-mcp"><img src="https://img.shields.io/packagist/dt/smith89k/laravel-post-mcp" alt="Total Downloads"></a>
 <a href="https://github.com/smith89k/laravel-post-mcp/blob/main/LICENSE.md"><img src="https://img.shields.io/packagist/l/smith89k/laravel-post-mcp" alt="License"></a>
-</p>
 
-# Laravel Post MCP
+</div>
 
-Let an AI app (Claude, ChatGPT, Cursor and others) write and manage the blog posts of your Laravel site, using the **Post model you already have**.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="art/banner-dark.png">
+  <img src="art/banner-light.png" alt="An AI chat asks for a post about the spring menu, scheduled for Friday. Laravel Post MCP passes it to your site, where the post appears as scheduled." width="100%">
+</picture>
 
 `smith89k/laravel-post-mcp` adds a [Model Context Protocol](https://modelcontextprotocol.io) server to your app with [`laravel/mcp`](https://github.com/laravel/mcp). Your AI app connects to one URL, signs in with OAuth, and can then list, read, draft, edit, schedule and publish posts, and upload images. It does this with your own model, events, validation rules and storage. The package creates no blog tables.
 
@@ -164,11 +171,11 @@ All settings live in `config/post-mcp.php` (publish with `php artisan vendor:pub
 
 | Key | Default | Meaning |
 |---|---|---|
-| `model` | `App\Models\Post` | The Eloquent model the tools manage |
-| `server.name` / `server.instructions` | app name + " Posts" / built-in | What the AI app sees when it connects |
+| `model` | `App\Models\Post` | The Eloquent model the tools manage (`POST_MCP_MODEL`) |
+| `server.name` / `server.instructions` | app name + " Posts" / built-in | What the AI app sees when it connects (`POST_MCP_SERVER_NAME`) |
 | `route.path` | `laravel-post-mcp` | Connector path (`POST_MCP_PATH`) |
 | `route.middleware` | `[]` | Extra middleware after authentication |
-| `route.rate_limit` | `60` | Requests per minute per user; `null` turns it off |
+| `route.rate_limit` | `60` | Requests per minute per user; `null` turns it off (`POST_MCP_RATE_LIMIT`) |
 | `ui.enabled` / `ui.path` | `true` / `laravel-post-mcp/settings` | The settings page and its path (`POST_MCP_UI_PATH`) |
 | `ui.middleware` / `ui.table` | `['web', 'auth']` / `post_mcp_settings` | Middleware before the gate check; table for the page's choices |
 | `auth.mode` | `oauth` | `oauth` (Passport) or `token` (`POST_MCP_AUTH`) |
@@ -203,7 +210,7 @@ All settings live in `config/post-mcp.php` (publish with `php artisan vendor:pub
 | `public_url.route` | `null` | Named route that takes the post, for links |
 | `list.per_page` / `list.max_per_page` / `list.search` / `list.order_by` | `15` / `50` / `[title]` / publish date | Listing |
 | `delete.enabled` | `false` | Offer `delete_post` |
-| `audit.enabled` / `audit.table` / `audit.log_channel` | `true` / `post_mcp_audit_logs` / `null` | Audit log |
+| `audit.enabled` / `audit.table` / `audit.log_channel` | `true` / `post_mcp_audit_logs` / `null` | Audit log (`POST_MCP_LOG_CHANNEL` for the channel) |
 
 ### Field rules
 
@@ -264,6 +271,14 @@ Implement `Smith89k\PostMcp\Contracts\MediaDriver::store(ImageFile $image, ?Mode
 **The consent screen fails with "Vite manifest not found".** laravel/mcp's consent view loads `resources/css/app.css` through Vite. Run `npm run build`, or publish the view (`php artisan vendor:publish --tag=mcp-views`) and change the `@vite` line to fit your assets.
 
 **Can I use it without Passport?** Yes, in token mode with Sanctum or a custom guard. Apps that sign in themselves (Claude, ChatGPT) need OAuth, though.
+
+## Upgrading from 0.1
+
+- **The connector moved** from `/mcp/posts` to `/laravel-post-mcp`. Remove the old connector in your AI app and add the new URL, or keep the old address with `POST_MCP_PATH=mcp/posts`. If you published `config/post-mcp.php` with 0.1, its `route.path` still holds the old address: change it to use the new one.
+- **Run `php artisan migrate`** to create the `post_mcp_settings` table for the new settings page. Until then the connector works from the config alone.
+- Clear the field map cache by running `php artisan post-mcp:fields`.
+
+See [CHANGELOG.md](CHANGELOG.md) for everything that changed.
 
 ## Testing
 
