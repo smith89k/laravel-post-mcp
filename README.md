@@ -1,5 +1,12 @@
 <p align="center"><img src="art/logo.svg" width="96" height="96" alt="Post MCP logo"></p>
 
+<p align="center">
+<a href="https://github.com/smith89k/laravel-post-mcp/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/smith89k/laravel-post-mcp/tests.yml?branch=main&label=tests" alt="Tests"></a>
+<a href="https://packagist.org/packages/smith89k/laravel-post-mcp"><img src="https://img.shields.io/packagist/v/smith89k/laravel-post-mcp" alt="Latest Version"></a>
+<a href="https://packagist.org/packages/smith89k/laravel-post-mcp"><img src="https://img.shields.io/packagist/dt/smith89k/laravel-post-mcp" alt="Total Downloads"></a>
+<a href="https://github.com/smith89k/laravel-post-mcp/blob/main/LICENSE.md"><img src="https://img.shields.io/packagist/l/smith89k/laravel-post-mcp" alt="License"></a>
+</p>
+
 # Laravel Post MCP
 
 Let an AI app (Claude, ChatGPT, Cursor and others) write and manage the blog posts of your Laravel site, using the **Post model you already have**.
