@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,{{ rawurlencode(str_replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', trim(view('post-mcp::partials.logo')->render()))) }}">
+<link rel="icon" href="data:image/svg+xml,{{ rawurlencode(str_replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', trim(view('post-mcp::partials.favicon')->render()))) }}">
 <script>
     try {
         const theme = localStorage.getItem('post-mcp-theme');

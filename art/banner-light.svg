@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">Laravel Post MCP</title>
+<desc id="desc">An AI chat asks for a post about the spring menu, scheduled for Friday. The package passes it to your Laravel site, where the post appears as scheduled.</desc>
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#d3d2ca"/></pattern>
+  <radialGradient id="glow" cx="50%" cy="46%" r="55%"><stop offset="0" stop-color="#f1f0eb"/><stop offset="1" stop-color="#e9e8e3" stop-opacity="0"/></radialGradient>
+  <filter id="lift" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.16"/></filter>
+  <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b63ff" stop-opacity=".22"/><stop offset="1" stop-color="#e9a400" stop-opacity=".28"/></linearGradient>
+  <marker id="tip" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 8 5 1 9" fill="none" stroke="#2b63ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <style>
+    .lbl{font-family:Bahnschrift,"DIN Alternate","Roboto Condensed","Arial Narrow",sans-serif}
+    .txt{font-family:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+    .mono{font-family:"Cascadia Mono",ui-monospace,Menlo,Consolas,monospace}
+  </style>
+</defs>
+<rect width="1280" height="640" fill="#e9e8e3"/>
+<rect width="1280" height="640" fill="url(#dots)"/>
+<rect width="1280" height="640" fill="url(#glow)"/>
+
+<!-- Name -->
+<text x="640" y="86" text-anchor="middle" class="lbl" font-size="40" font-weight="600" fill="#1c1d20" letter-spacing=".5">Laravel Post MCP</text>
+<text x="640" y="120" text-anchor="middle" class="txt" font-size="19" fill="#66675f">Let any AI app write and manage your blog posts</text>
+
+<!-- Chat card -->
+<g filter="url(#lift)">
+  <rect x="72" y="168" width="420" height="330" rx="22" fill="#f6f5f1" stroke="#d3d2ca"/>
+</g>
+<text x="100" y="208" class="lbl" font-size="15" fill="#66675f" letter-spacing="1.6">AI CHAT</text>
+<circle cx="452" cy="203" r="4" fill="#94958d"/><circle cx="438" cy="203" r="4" fill="#94958d"/>
+<line x1="72" y1="226" x2="492" y2="226" stroke="#d3d2ca"/>
+<rect x="148" y="246" width="320" height="86" rx="18" fill="#2b63ff"/>
+<text class="txt" font-size="18" fill="#fff"><tspan x="168" y="280">Draft a post about our spring menu</tspan><tspan x="168" y="308">and schedule it for Friday.</tspan></text>
+<rect x="96" y="350" width="300" height="124" rx="18" fill="#ffffff" stroke="#d3d2ca"/>
+<text x="116" y="384" class="txt" font-size="18" fill="#1c1d20">Done. It goes live Friday at 9:00.</text>
+<rect x="116" y="402" width="150" height="28" rx="14" fill="#d9f1e2"/>
+<path d="M131 416l4 4 7-8" fill="none" stroke="#1d8a4e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="421" class="mono" font-size="13.5" fill="#1d8a4e">create_post</text>
+<rect x="116" y="436" width="168" height="28" rx="14" fill="#d9f1e2"/>
+<path d="M131 450l4 4 7-8" fill="none" stroke="#1d8a4e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="455" class="mono" font-size="13.5" fill="#1d8a4e">schedule_post</text>
+
+<!-- Flow -->
+<path d="M506 333 H566" stroke="#2b63ff" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" fill="none" marker-end="url(#tip)"/>
+<path d="M714 333 H774" stroke="#2b63ff" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" fill="none" marker-end="url(#tip)"/>
+<rect x="580" y="273" width="120" height="120" rx="28" fill="#1c1d20" filter="url(#lift)"/>
+<svg x="580" y="273" width="120" height="120" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#1c1d20"/>
+  <rect x=".5" y=".5" width="63" height="63" rx="14.5" fill="none" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M19.5 10h19.2l8.8 9.3V51a3 3 0 0 1-3 3H19.5a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3Z" fill="#f4f3ee"/>
+  <path d="M38.7 10v6.3a3 3 0 0 0 3 3h5.8Z" fill="#cfcec6"/>
+  <rect x="21.5" y="18" width="12" height="3" rx="1.5" fill="#b9b8b0"/>
+  <rect x="21.5" y="24" width="20" height="3" rx="1.5" fill="#b9b8b0"/>
+  <rect x="19.5" y="35" width="25" height="11" rx="5.5" fill="#dcdbd3"/>
+  <circle cx="25" cy="40.5" r="1.4" fill="#9fa09a"/>
+  <circle cx="32" cy="40.5" r="1.4" fill="#e9a400"/>
+  <rect x="35" y="36.5" width="8" height="8" rx="4" fill="#2b63ff"/>
+  <circle cx="39" cy="40.5" r="1.6" fill="#fff"/></svg>
+
+<!-- Site card -->
+<g filter="url(#lift)">
+  <rect x="788" y="150" width="420" height="366" rx="22" fill="#f6f5f1" stroke="#d3d2ca"/>
+</g>
+<circle cx="816" cy="184" r="5.5" fill="#94958d"/><circle cx="834" cy="184" r="5.5" fill="#94958d"/><circle cx="852" cy="184" r="5.5" fill="#94958d"/>
+<rect x="874" y="170" width="310" height="28" rx="14" fill="#dcdbd4"/>
+<text x="892" y="189.5" class="txt" font-size="14" fill="#66675f">your-site.com/blog/spring-menu</text>
+<line x1="788" y1="212" x2="1208" y2="212" stroke="#d3d2ca"/>
+<rect x="812" y="232" width="372" height="120" rx="14" fill="url(#hero)"/>
+<circle cx="1128" cy="268" r="16" fill="#e9a400" fill-opacity=".75"/>
+<path d="M812 330 L880 282 L936 318 L986 290 L1060 352 H826 a14 14 0 0 1 -14 -14Z" fill="#2b63ff" fill-opacity=".38"/>
+<path d="M940 352 L1040 286 L1130 352Z" fill="#2b63ff" fill-opacity=".55"/>
+<text x="812" y="392" class="txt" font-size="24" font-weight="600" fill="#1c1d20">Our spring menu is here</text>
+<rect x="812" y="408" width="330" height="9" rx="4.5" fill="#dcdbd4"/>
+<rect x="812" y="426" width="270" height="9" rx="4.5" fill="#dcdbd4"/>
+<rect x="812" y="458" width="176" height="32" rx="16" fill="#fbefcf"/>
+<circle cx="831" cy="474" r="5" fill="#a87400"/>
+<text x="845" y="479.5" class="lbl" font-size="15" fill="#a87400" letter-spacing=".6">SCHEDULED &#183; FRI</text>
+<rect x="1000" y="458" width="76" height="32" rx="16" fill="none" stroke="#d3d2ca"/>
+<text x="1038" y="479" text-anchor="middle" class="txt" font-size="14" fill="#66675f">menu</text>
+<rect x="1086" y="458" width="84" height="32" rx="16" fill="none" stroke="#d3d2ca"/>
+<text x="1128" y="479" text-anchor="middle" class="txt" font-size="14" fill="#66675f">spring</text>
+
+<!-- Tagline -->
+<text x="640" y="584" text-anchor="middle" class="lbl" font-size="24" fill="#1c1d20" letter-spacing=".4">Your Post model. <tspan fill="#2b63ff">Your rules.</tspan> Any AI app.</text>
+</svg>
