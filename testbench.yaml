@@ -1,0 +1,4 @@
+providers:
+  - Laravel\Mcp\Server\McpServiceProvider
+  - Laravel\Passport\PassportServiceProvider
+  - Smith89k\PostMcp\PostMcpServiceProvider
